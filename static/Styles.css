@@ -361,7 +361,7 @@ body {
 @media (max-width: 650px) {
   /* Navbar adjustments */
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 10px 0;
   }
