@@ -380,7 +380,7 @@ body {
 
   /* Hero section */
   .hero {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     padding: 20px 10px;
   }
