@@ -363,7 +363,6 @@ body {
     width: 90%;
     margin: 10px 0;
   }
-
   /* Hero section */
   .hero {
     flex-direction: column; /* fixed: was row */
