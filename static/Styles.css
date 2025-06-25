@@ -359,9 +359,9 @@ body {
 
 /* Responsive for mobile */
 @media (max-width: 650px) {
-
-
+  /* Navbar */
   .nav-links {
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -375,7 +375,7 @@ body {
 
   /* Hero section */
   .hero {
-    flex-direction: row;
+    flex-direction: column; /* fixed: was row */
     text-align: center;
     padding: 20px 10px;
   }
@@ -396,24 +396,24 @@ body {
     margin-bottom: 20px;
   }
 
-  /* Contact form */
+  /* Contact section */
   .contact-container {
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    width: 100% !important;
-    margin: 8px 0 !important;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
   .contact-form {
     width: 100%;
     max-width: 400px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
   .contact-form button {
