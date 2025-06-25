@@ -359,12 +359,7 @@ body {
 
 /* Responsive for mobile */
 @media (max-width: 650px) {
-  /* Navbar adjustments */
-  .navbar {
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 0;
-  }
+
 
   .nav-links {
     flex-direction: column;
