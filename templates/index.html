@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Styles.css') }}">
+
+
+  <!-- Font Awesome for icons -->
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="hire-btn">Hire me</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-left">
+      <p class="intro-text">Hi, It's me</p>
+      <h1>Santhoshkanna</h1>
+      <h2>And I'm a <span class="highlight">Frontend Developer</span></h2>
+      <p class="desc">
+      "I specialize in building clean, interactive, and accessible front-end applications. Ready to bring great ideas to life through code and design!"
+      </p>
+      <div class="social-buttons">
+  <a href="www.linkedin.com/in/santhoshkanna021" target="_blank">
+    <img src="{{ url_for('static', filename='Resource/linkedin-in.svg') }}" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/santhoshkanna021" target="_blank">
+    <img src="{{ url_for('static', filename='Resource/Group 15.svg') }}" alt="GitHub">
+  </a>
+</div>
+
+      <br>
+      <a href="{{ url_for('static', filename='Santhoshkanna_CV.pdf') }}" class="btn-download">Download CV</a>
+    </div>
+    <div class="hero-right">
+      <img src="{{ url_for('static', filename='Resource/Banner Image.png') }}" alt="Developer">
+
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-content">
+      <div class="about-img">
+        <img src="{{ url_for('static', filename='Resource/sandy.jpg') }}" alt="Santhoshkanna Photo" />
+      </div>
+      <div class="about-text">
+        <h3>Frontend Enthusiast</h3><br>
+        <p>
+          I’m a Computer Science graduate with a strong interest in frontend development. As a fresher, I’m passionate about building clean, responsive web applications and continuously learning new technologies.
+        </p>
+        <p>
+          I've worked on several front-end and UI-focused projects, and I'm always eager to explore new design trends, technologies, and development opportunities to enhance user experience.
+        </p>
+        <br>
+        <p>
+          <span id="more-text" style="display: none;">
+            Eager to bring creativity, efficiency, and a user-first mindset to a dynamic front-end development team .
+          </span>
+        </p>
+        <a href="#" class="btn-read" onclick="toggleReadMore(event)">Read More...</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skill-bar">
+      <div class="skill-info">HTML - 5</div>
+      <div class="progress-bar"><div class="progress" style="width: 80%">80%</div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-info">CSS - 3</div>
+      <div class="progress-bar"><div class="progress" style="width: 75%">75%</div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-info">Bootstrap</div>
+      <div class="progress-bar"><div class="progress" style="width: 60%">60%</div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-info">JavaScript</div>
+      <div class="progress-bar"><div class="progress" style="width: 50%">50%</div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-info">React</div>
+      <div class="progress-bar"><div class="progress" style="width: 75%">75%</div></div>
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-info">MongoDB</div>
+      <div class="progress-bar"><div class="progress" style="width: 60%">60%</div></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects">
+    <h2 class="section-title" >My <span>Projects</span></h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="{{ url_for('static', filename='images/interview-bot.png') }}" alt="Intelligent Interview Bot" />
+        <h3>Intelligent Interview Bot</h3>
+        <p>A full stack app that simulates real-time interviews using speech recognition and NLP. Built with Python, Flask, MySQL, and HTML/CSS.</p>
+        <a href="#" class="project-btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img src="{{ url_for('static', filename='images/portfolio-site.png') }}" alt="Portfolio Website" />
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive full stack portfolio site built with HTML, CSS, JavaScript, and a Flask backend with contact form integration and MySQL storage.</p>
+        <a href="#" class="project-btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> +91 6379999590</p>
+        <p><i class="fas fa-envelope"></i> santhoshkannar802@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu, India</p>
+      </div>
+
+      <form class="contact-form" method="POST" action="/send">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <div class="half-row">
+          <input type="text" name="phone" placeholder="Phone Number" />
+          <input type="text" name="subject" placeholder="Subject" />
+        </div>
+        <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Copyright © 2025 | All Rights Reserved by Santhoshkanna</p>
+  </footer>
+
+
+ <script src="static/script.js"></script>
+
+</body>
+</html>
