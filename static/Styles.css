@@ -66,7 +66,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 4rem 2rem;
+  padding:4rem 2rem;
   background-color: #31065A;
 }
 
@@ -184,45 +184,56 @@ body {
 .skills-section {
   background-color: #31065A;
   padding: 2rem;
+  text-align: center;
 }
 
-.skill-bar {
-  margin-bottom: 1.5rem;
-  background: #eee;
-  border-radius: 14px;
-  overflow: hidden;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.section-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
 }
 
-.skill-info {
-  font-weight: bold;
-  padding: 0.5rem;
+.section-title span {
+  color: #00bcd4;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skill-card {
   background-color: #170550;
   color: white;
-  text-align: left;
-}
-
-.progress-bar {
-  background-color: #ddd;
-  width: 100%;
-  height: 25px;
-  position: relative;
-}
-
-.progress {
-  background-color: #00bcd4;
-  height: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
   text-align: center;
-  color: white;
-  line-height: 25px;
-  font-size: 0.9rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
 }
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #00bcd4;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  margin: 0;
+}
+
 
 /* ------------------- Projects Section ------------------- */
 .projects-section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   background-color:  #170550;
 }
 
@@ -283,7 +294,7 @@ body {
 
 /* ------------------- Contact Section ------------------- */
 .contact-section {
-  padding: 2rem;
+  padding: 3rem;
   background-color:#31065A;
   color: white;
 }
@@ -354,7 +365,7 @@ body {
 .hero {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 60px;
 }
 
 /* Responsive for mobile */
@@ -362,7 +373,7 @@ body {
 
   /* Hero section */
   .hero {
-    flex-direction: column; /* fixed: was row */
+    flex-direction: row; /* fixed: was row */
     text-align: center;
     padding: 20px 10px;
   }
