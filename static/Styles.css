@@ -359,10 +359,7 @@ body {
 
 /* Responsive for mobile */
 @media (max-width: 650px) {
-  .search-bar {
-    width: 90%;
-    margin: 10px 0;
-  }
+
   /* Hero section */
   .hero {
     flex-direction: column; /* fixed: was row */
