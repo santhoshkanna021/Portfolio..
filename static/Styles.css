@@ -371,9 +371,14 @@ body {
 /* Responsive for mobile */
 @media (max-width: 650px) {
 
+  /* Hide navbar */
+  .navbar {
+    display: none;
+  }
+
   /* Hero section */
   .hero {
-    flex-direction: row; /* fixed: was row */
+    flex-direction: column; /* should be column on mobile */
     text-align: center;
     padding: 20px 10px;
   }
