@@ -378,7 +378,7 @@ body {
 
   /* Hero section */
   .hero {
-    flex-direction: column; /* should be column on mobile */
+    flex-direction: row; /* should be column on mobile */
     text-align: center;
     padding: 20px 10px;
   }
