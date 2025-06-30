@@ -380,7 +380,7 @@ body {
   .hero {
     flex-direction: row; /* should be column on mobile */
     text-align: center;
-    padding: 30px 10px;
+    padding: 30px 1px;
   }
 
   .hero-left,
