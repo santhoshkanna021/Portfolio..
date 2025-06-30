@@ -370,17 +370,24 @@ body {
 
 /* Responsive for mobile */
 @media (max-width: 650px) {
+  * {
+    box-sizing: border-box;
+  }
 
-  /* Hide navbar */
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
   .navbar {
     display: none;
   }
 
-  /* Hero section */
   .hero {
-    flex-direction: row; /* should be column on mobile */
+    flex-direction: column;
     text-align: center;
-    padding: 30px 1px;
+    padding: 30px 10px;
   }
 
   .hero-left,
@@ -388,7 +395,6 @@ body {
     width: 100%;
   }
 
-  /* Projects section */
   .projects-container {
     flex-direction: column;
     padding: 0 10px;
@@ -399,7 +405,6 @@ body {
     margin-bottom: 20px;
   }
 
-  /* Contact section */
   .contact-container {
     flex-direction: column;
     align-items: center;
@@ -416,7 +421,6 @@ body {
     width: 100%;
     margin: 8px 0;
     padding: 10px;
-    box-sizing: border-box;
   }
 
   .contact-form button {
