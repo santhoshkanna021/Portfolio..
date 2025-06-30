@@ -369,7 +369,7 @@ body {
 }
 
 /* Responsive for mobile */
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   * {
     box-sizing: border-box;
   }
